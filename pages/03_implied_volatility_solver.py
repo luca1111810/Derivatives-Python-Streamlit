@@ -1,7 +1,7 @@
 import streamlit as st
 
 from src.bisection_IV_v1 import solve_IV_bisection, plot_bisection_estimates
-from src.newton_raphson_IV_v1_03 import solve_IV_newton_raphson, plot_newton_raphson_estimates
+from src.newton_raphson_IV_v1_08 import solve_IV_newton_raphson, plot_newton_raphson_estimates
 
 st.set_page_config(page_title="Option Pricer", layout="wide")
 

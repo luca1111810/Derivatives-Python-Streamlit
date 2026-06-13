@@ -1,6 +1,6 @@
 import streamlit as st
 
-from black_scholes_v1_02 import black_scholes_price_greeks
+from src.black_scholes_v1_03 import black_scholes_price_greeks
 from src.price_greeks_plot_v1 import plot_price_vs_spot, plot_delta_vs_spot, plot_gamma_vs_spot, plot_vega_vs_spot
 
 st.set_page_config(page_title="Option Pricer", layout="wide")

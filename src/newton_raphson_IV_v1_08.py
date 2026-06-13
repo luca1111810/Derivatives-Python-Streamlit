@@ -1,10 +1,10 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-from src.black_scholes_v1_02 import black_scholes_price_greeks
+from src.black_scholes_v1_03 import black_scholes_price_greeks
 
 def solve_IV_newton_raphson(call, option_price, S0, K, T, r, tol=1e-3, max_iters=1000):
-    vol_est = 1
+    vol_est = 0.5
     vol_estimates = [vol_est]
     
     for i in range(max_iters):
@@ -16,7 +16,13 @@ def solve_IV_newton_raphson(call, option_price, S0, K, T, r, tol=1e-3, max_iters
             return {"iterations": i,
                     "estimates": vol_estimates}
 
-        vol_est -= (price_est - option_price) / vega
+        if abs(vega) < 1e-8:
+            return {"iterations": i,
+                    "estimates": vol_estimates}
+
+        vol_est -= (price_est - option_price) / (100 * vega)
+        vol_est = min(max(vol_est, 1e-6), 5) # keep volatility in a sensible positive range
+
         vol_estimates.append(vol_est)
     
     return {"iterations": -1,

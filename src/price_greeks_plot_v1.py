@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-from src.black_scholes_v1_02 import black_scholes_price_greeks
+from src.black_scholes_v1_03 import black_scholes_price_greeks
 
 def plot_price_vs_spot(call, S0, K, vol, T, r):
 

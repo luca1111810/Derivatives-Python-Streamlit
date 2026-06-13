@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-from src.black_scholes_v1_02 import black_scholes_price_greeks
+from src.black_scholes_v1_03 import black_scholes_price_greeks
 
 def solve_IV_bisection(call, option_price, S0, K, T, r, tol=1e-3, max_iters=1000):
     vol_low, vol_high = 0, 1

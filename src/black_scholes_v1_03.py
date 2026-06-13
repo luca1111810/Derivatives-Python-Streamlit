@@ -3,8 +3,8 @@ from scipy.stats import norm
 
 def black_scholes_price_greeks(call:bool, S0:float, K:float, vol:float, T:float, r:float):
 
-    if S0 <= 0 or K <= 0 or vol <= 0 or T <= 0:
-        raise ValueError("S0, K, vol, and T must all be positive.")
+    # if S0 <= 0 or K <= 0 or vol <= 0 or T <= 0:
+    #     raise ValueError("S0, K, vol, and T must all be positive.")
 
     d1 = (np.log(S0 / K) + (r + vol**2 / 2) * T) / (vol * np.sqrt(T))
     d2 = d1 - (vol * np.sqrt(T))
