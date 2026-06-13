@@ -1,0 +1,14 @@
+
+-> plot payoff curve for specific input parameters
+-> "construct option position" section where we can combine various options and get a net long/short in greeks, and payoff curve
+
+
+-> GPT main sections:
+├── 1. Option Pricer
+├── 2. Greeks Explorer
+├── 3. Strategy Builder
+├── 4. Implied Volatility
+├── 5. Volatility Smile / Surface
+├── 6. Delta-Hedging Simulator
+├── 7. Portfolio Risk Summary
+└── 8. About / Methodology
