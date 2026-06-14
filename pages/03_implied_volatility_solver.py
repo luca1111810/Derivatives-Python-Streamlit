@@ -46,6 +46,7 @@ with st.sidebar:
     S0 = st.number_input(
         "Stock price S₀",
         min_value=1e-8,
+        value=100.0,
         step=1.0,
         key="S0"
     )
@@ -53,6 +54,7 @@ with st.sidebar:
     K = st.number_input(
         "Strike price K",
         min_value=1e-8,
+        value=100.0,
         step=1.0,
         key="K"
     )
@@ -61,12 +63,14 @@ with st.sidebar:
         "Time to expiry T (years)",
         min_value=1e-8,
         max_value=5.0,
+        value=1.0,
         step=0.01,
         key="T"
     )
 
     r = st.number_input(
         "Risk-free rate r",
+        value=0.05,
         step=0.01,
         key="r"
     )
